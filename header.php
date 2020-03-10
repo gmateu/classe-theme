@@ -16,7 +16,15 @@
             </div>
             <div class="second-col">
                 <div class="account">cuenta</div>
-                <div class="menu">menu</div>
+                <div class="menu">
+                <?php 
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'defabrica_main_menu'
+                        )
+                    );
+                ?>
+                </div>
             </div>
         </section>
     </header>

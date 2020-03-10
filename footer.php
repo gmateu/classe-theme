@@ -3,7 +3,13 @@
         footer widgets
     </div>
     <div class="menu-footer">
-        menu footer
+    <?php 
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'defabrica_main_menu'
+                        )
+                    );
+                ?>
     </div>
 </section>
     
