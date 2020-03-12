@@ -11,7 +11,7 @@ get_header();
             <article>
                 <h2><a href="<?=the_permalink()?>"><?=the_title()?></a></h2>
                 <p>
-                   <?=the_excerpt()?>
+                   <?=the_content()?>
                 </p>
             </article>    
             <?php
