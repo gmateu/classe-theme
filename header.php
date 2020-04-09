@@ -7,31 +7,18 @@
     <?php wp_head();?>
 </head>
 <body>
-    <header>
-        <section id="search">
-            <div class="container">
-                buscar
-            </div>
-        </section>
-        <section id="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="first-col brand col-3">
-                        logo
-                    </div>
-                    <div class="second-col col-9">
-                        <div class="account">cuenta</div>
-                        <div class="menu">
-                        <?php 
-                            wp_nav_menu(
-                                array(
-                                    'theme_location' => 'defabrica_main_menu'
-                                )
-                            );
-                        ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <header class="row p-3 border-bottom shadow">
+        <div class="col-6">
+            <h4 class="font-weight-normal">Company name</h4>
+        </div>
+        <nav class="col-6 text-right">
+            <a class="p-2" href="<?php echo site_url("home")?>">Home</a>
+            <a class="p-2" href="<?php echo site_url("blog")?>">Blog</a>
+            <a class="p-2" href="#">Store</a>
+            <a class="p-2" href="#">About us</a>
+            <a class="btn btn-outline-primary" href="#">Sing up</a>
+        </nav>
     </header>
+    
+
+    

@@ -11,6 +11,19 @@ body{
     font-size: 18px;
 }
 
+.btn-outline-primary{
+    background-color: rgb(243, 183, 193);
+    color: rgb(124, 28, 44);
+    font-weight: bold;
+    border: 2px solid rgb(124, 28, 44);
+}
+
+.btn-outline-primary:hover{
+    background-color: rgb(124, 28, 44);
+    color: rgb(243, 183, 193);
+    border: 2px solid rgb(243, 183, 193);
+}
+
 #top-bar{
     background-color: orange;
     height: 70px;
@@ -25,11 +38,6 @@ body{
     background-color: yellow;
 }
 
-.menu ul li{
-    display: inline;
-    margin: 0 5px 0 0;
-}
-
 .menu ul{
     padding: 0;
     margin:0;
@@ -37,6 +45,17 @@ body{
     font-weight: 500;
     border-radius: 0;
 }
+
+.menu ul li{
+    display: inline;
+    margin: 0 5px 0 0;
+}
+
+.menu ul li.current-menu-item a{
+    color:red;
+    background-color: blue;;
+}
+
 
 /*FOOTER STYLES*/
 .menu-footer ul{
