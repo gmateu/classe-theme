@@ -8,4 +8,37 @@ Tema de pruebas de fabrica
 */
 
 body{
+    font-size: 18px;
+}
+
+#top-bar{
+    background-color: orange;
+    height: 70px;
+}
+
+/*HEADER STYLES*/
+.brand{
+    background-color: green;
+}
+
+.second-col{
+    background-color: yellow;
+}
+
+.menu ul li{
+    display: inline;
+    margin: 0 5px 0 0;
+}
+
+.menu ul{
+    padding: 0;
+    margin:0;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+/*FOOTER STYLES*/
+.menu-footer ul{
+    list-style: none;
 }

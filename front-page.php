@@ -1,0 +1,1 @@
+<h1>Pàgina de bienvenida (landing page)</h1>

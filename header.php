@@ -9,22 +9,28 @@
 <body>
     <header>
         <section id="search">
-            buscar
+            <div class="container">
+                buscar
+            </div>
         </section>
         <section id="top-bar">
-            <div class="brand">
-                logo
-            </div>
-            <div class="second-col">
-                <div class="account">cuenta</div>
-                <div class="menu">
-                <?php 
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'defabrica_main_menu'
-                        )
-                    );
-                ?>
+            <div class="container">
+                <div class="row">
+                    <div class="first-col brand col-3">
+                        logo
+                    </div>
+                    <div class="second-col col-9">
+                        <div class="account">cuenta</div>
+                        <div class="menu">
+                        <?php 
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'defabrica_main_menu'
+                                )
+                            );
+                        ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
