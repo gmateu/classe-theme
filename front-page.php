@@ -55,6 +55,43 @@ get_header();
 
 <!--IMAGENES REDONDAS-->
 
+<!--IMAGENES-->
+  
+  <div id="productos" class="mt-3">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <img class="rounded-circle" width="140" height="140" src="<?php echo get_theme_file_uri('img/fruit-1.jpg')?>" alt="">
+            <h4>Título</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore error est nihil ab, consequatur consectetur ut dolorum impedit laborum.
+            </p>
+            <a href="#" class="btn btn-secondary mb-2">ver >></a>
+        </div>
+        <div class="col-12 col-md-4">
+          <img class="rounded-circle" width="140" height="140" src="<?php echo get_theme_file_uri('img/fruit-2.jpg')?>" alt="">
+            <h4>Título</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore error est nihil ab, consequatur consectetur ut dolorum impedit laborum.
+            </p>
+            <a href="#" class="btn btn-secondary mb-2">ver >></a>
+        </div>
+        <div class="col-12 col-md-4">
+          <img class="rounded-circle" width="140" height="140" src="<?php echo get_theme_file_uri('img/fruit-3.jpg')?>" alt="">
+            <h4>Título</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore error est nihil ab, consequatur consectetur ut dolorum impedit laborum.
+            </p>
+            <a href="#" class="btn btn-secondary mb-2">ver >></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!--IMAGENES-->
+
 <!--IMAGENES REDONDAS-->
 
 
