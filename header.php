@@ -7,17 +7,26 @@
     <?php wp_head();?>
 </head>
 <body>
-    <header class="row p-3 border-bottom shadow">
-        <div class="col-6">
-            <h4 class="font-weight-normal">Company name</h4>
+    <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item <?php if(is_page('home')) echo 'active'?>">
+                <a class="nav-link" href="<?php echo site_url('home');?>">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item <?php if(is_page('blog')) echo 'active'?>">
+                <a class="nav-link" href="<?php echo site_url("blog")?>">Blog</a>
+            </li>
+            <li class="nav-item <?php if(is_page('sample-page')) echo 'active'?>">
+                <a class="nav-link" href="<?php echo site_url("sample-page")?>">Sample page</a>
+            </li>
+            </ul>
         </div>
-        <nav class="col-6 text-right">
-            <a class="p-2" href="<?php echo site_url("home")?>">Home</a>
-            <a class="p-2" href="<?php echo site_url("blog")?>">Blog</a>
-            <a class="p-2" href="#">Store</a>
-            <a class="p-2" href="#">About us</a>
-            <a class="btn btn-outline-primary" href="#">Sing up</a>
-        </nav>
+    </nav>
     </header>
     
 
