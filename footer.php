@@ -1,7 +1,7 @@
 
 <hr>
 <section id="footer">
-    <div class="row text-center text-md-left">
+    <div class="row text-center text-md-left text-small">
         <div class="col-12 col-md-3">
             <div class="ml-md-5">
                 <h4>logo</h4>

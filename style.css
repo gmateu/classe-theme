@@ -7,9 +7,15 @@ Tema de pruebas de fabrica
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
 body{
+    font-family: 'Roboto';
     font-size: 18px;
 }
+
+
 
 .btn-outline-primary{
     background-color: rgb(243, 183, 193);
@@ -58,6 +64,11 @@ body{
 
 
 /*FOOTER STYLES*/
-ul{
+#footer ul{
     list-style: none;
+    padding: 0px;
+}
+
+#footer  a{
+    color: red;
 }
