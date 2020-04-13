@@ -1,4 +1,8 @@
 <?php
+//cargamos librerias de terceros
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+
 function defabrica_config(){
     register_nav_menus(array(
         'defabrica_main_menu'  => 'De Fabrica Main Menu',
@@ -15,7 +19,8 @@ function defabrica_scripts(){
     wp_enqueue_style( "bootstrap_css", get_theme_file_uri("inc/bootstrap.min.css"),array(), "4.3.1","all" );
 
     //añade a header.php el fichero style.css
-    wp_enqueue_style( "defabrica_style.css",  get_stylesheet_uri(), array(),'1.0','all');
+    wp_enqueue_style( "defabrica_style.css",  get_stylesheet_uri(), array(),filemtime(get_template_directory().'/style.css'),'all');
+    wp_enqueue_style("fuentes_de_google","https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700|https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700|https://fonts.googleapis.com/css2?family=Dancing+Script");
 }
 add_action( 'wp_enqueue_scripts', 'defabrica_scripts');
 

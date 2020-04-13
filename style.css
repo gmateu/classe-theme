@@ -3,31 +3,34 @@ Author: Iván Cancelas
 Theme Name: defabrica
 Version: 1.0
 
-Tema de pruebas de fabrica 
+Tema de pruebas de fabrica dddd
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+:root{
+    --primary-color:rgb(176, 238, 204);
+    --text-color:rgb(12, 44, 16);
+}
+
 
 body{
-    font-family: 'Roboto';
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 
-.btn-outline-primary{
-    background-color: rgb(243, 183, 193);
-    color: rgb(124, 28, 44);
+.btn-secondary{
+    background-color: var(--primary-color);
+    color: var(--text-color);
     font-weight: bold;
-    border: 2px solid rgb(124, 28, 44);
+    border: 2px solid var(--primary-color);
 }
 
-.btn-outline-primary:hover{
-    background-color: rgb(124, 28, 44);
-    color: rgb(243, 183, 193);
-    border: 2px solid rgb(243, 183, 193);
+.btn-secondary:hover{
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 #top-bar{
@@ -44,22 +47,13 @@ body{
     background-color: yellow;
 }
 
-.menu ul{
-    padding: 0;
-    margin:0;
-    font-size: 1em;
-    font-weight: 500;
-    border-radius: 0;
-}
 
-.menu ul li{
-    display: inline;
-    margin: 0 5px 0 0;
+/*ESTILOS DE MAIN MENÚ*/
+.main-menu ul li.current-menu-item a{
+    font-weight: bold;
 }
-
-.menu ul li.current-menu-item a{
-    color:red;
-    background-color: blue;;
+.dropdown-menu{
+    opacity: 0.7;
 }
 
 
@@ -70,5 +64,5 @@ body{
 }
 
 #footer  a{
-    color: red;
+    color: var(--text-color);
 }
