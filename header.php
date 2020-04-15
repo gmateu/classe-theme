@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class()?>>
     <header>
     <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
         <div class="container">

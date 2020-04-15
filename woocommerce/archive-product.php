@@ -28,7 +28,7 @@ get_header( 'shop' );
  */
 ?>
 
-<div class="container">
+<div class="container shop-content">
 	<div class="row">
 		<div class="col-4">
 			<?php
