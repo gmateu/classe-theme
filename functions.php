@@ -7,7 +7,24 @@ function defabrica_config(){
     register_nav_menus(array(
         'defabrica_main_menu'  => 'De Fabrica Main Menu',
         'defabrica_footer_menu'  => 'De Fabrica Footer Menu',
-    ));   
+    ));
+    
+    //Añadir soporte de woocommerce
+    add_theme_support('woocommerce',array(
+        'thumbnail_image_width'     => 255,
+        'single_image_width'        => 255,
+        'product_grid'              => array(
+                'default_rows'    => 10,
+                'min_rows'        =>  5,
+                'max_rows'        => 10,
+                'default_columns' =>  1,
+                'min_columns'     =>  1,
+                'max_columns'     =>  10, 
+        ),
+    ));
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support( 'wc-product-gallery-slider' );
 }
 
 add_action( 'after_setup_theme', 'defabrica_config', 0 );
