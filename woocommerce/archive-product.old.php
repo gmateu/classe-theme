@@ -30,7 +30,7 @@ get_header( 'shop' );
 
 <div class="container shop-content">
 	<div class="row">
-		<div class="col-4">
+		<div class="d-none d-md-block order-2 order-md-1 col-md-4 col-lg-3">
 			<?php
 			/**
 			 * Hook: woocommerce_sidebar.
@@ -40,6 +40,7 @@ get_header( 'shop' );
 			do_action( 'woocommerce_sidebar' );
 			?>
 		</div>	
+		<div class="order-1 order-md-2 col-md-8 col-lg-9"><!--abrimos div col-8-->
 <?php
 
 
@@ -115,6 +116,7 @@ do_action( 'woocommerce_after_main_content' );
 
 
 ?>
+		</div>
 	</div><!--cerramos row-->
 </div><!--aqui cerramos contaniner-->
 <?php

@@ -27,7 +27,7 @@ function defabrica_config(){
     add_theme_support( 'wc-product-gallery-slider' );
 }
 
-add_action( 'after_setup_theme', 'defabrica_config', 0 );
+add_action( 'after_setup_theme', 'defabrica_config',0 );
 
 
 function defabrica_scripts(){
@@ -41,4 +41,5 @@ function defabrica_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'defabrica_scripts');
 
-?>
+require get_template_directory().'/inc/wc_modifications.php';
+
