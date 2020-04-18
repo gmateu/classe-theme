@@ -41,5 +41,8 @@ function defabrica_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'defabrica_scripts');
 
-require get_template_directory().'/inc/wc_modifications.php';
+//esto solo se carga si el plugin està activado
+if (class_exists('woocommerce')){
+    require get_template_directory().'/inc/wc_modifications.php';
+}
 
