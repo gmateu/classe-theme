@@ -4,42 +4,45 @@ get_header();
 
 
 <!--CAROUSEL-->
+<?php
+  //vamos a obtener las hijas de slider
+  $pagina=get_page_by_title( 'slider');
+  $slides=get_pages(
+    array(
+      'child_of' => $pagina->ID,
+    )
+  );
+?>
 <div id="carousel" class="carousel slide carousel-fade " data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-    <li data-target="#carousel" data-slide-to="3"></li>
+  <?php 
+    $active="active";
+    $i=0;
+    foreach($slides as $slide){
+  ?>
+    <li data-target="#carousel" data-slide-to="<?=$i?>" class="<?=$active?>"></li>
+  <?php
+    $active="";
+    $i++;
+    }
+  ?>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item" data-interval="1000">
-        <img src="<?echo get_theme_file_uri('img/bathroom.jpg')?>" class="d-block w-100" alt="...">
+    <?php
+      $active="active";
+      foreach($slides as $slide){
+    ?>
+    <div class="carousel-item <?=$active?>" data-interval="5000">
+        <?php echo get_the_post_thumbnail( $slide->ID,'defabrica_slider',array('class' => 'img-fluid d-block w-100')); ?>
         <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h5><?=$slide->post_title?></h5>
+            <p><?=$slide->post_content?></p>
         </div>
     </div>
-    <div class="carousel-item active" data-interval="2000">
-      <img src="<?echo get_theme_file_uri('img/bedroom.jpg')?>" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-    </div>
-    <div class="carousel-item" data-interval="1000">
-      <img src="<?echo get_theme_file_uri('img/kitchen.jpg')?>" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-    </div>
-    <div class="carousel-item" data-interval="1000">
-      <img src="<?echo get_theme_file_uri('img/tv.jpg')?>" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Fourth slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-    </div>
+    <?php
+      $active="";
+      }
+    ?>
   </div>
   <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
