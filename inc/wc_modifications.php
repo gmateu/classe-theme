@@ -81,6 +81,14 @@ function defabrica_wc_modify(){
             </div><!--cerramos shop tags-->
         <?php
     }
+
+    add_filter('woocommerce_show_page_title','info_basic_page_title');
+    function info_basic_page_title(){
+        ?>
+        <h1>Camaleon</h1>
+        <?php
+    
+    }
 }
 
 add_action('wp','defabrica_wc_modify');

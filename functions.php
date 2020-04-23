@@ -25,6 +25,11 @@ function defabrica_config(){
     add_theme_support('wc-product-gallery-zoom');
     add_theme_support('wc-product-gallery-lightbox');
     add_theme_support( 'wc-product-gallery-slider' );
+
+    //una image custom size para el slider
+    add_image_size('defabrica_slider',1920,800,array('center','center'));
+    add_image_size('defabrica_icon',30,30,array('center','center'));
+
 }
 
 add_action( 'after_setup_theme', 'defabrica_config',0 );

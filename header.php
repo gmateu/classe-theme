@@ -14,7 +14,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="main-menu navbar-brand" href="#">Navbar</a>
                 <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'defabrica_main_menu',
@@ -27,8 +26,13 @@
                     'walker'            => new WP_Bootstrap_Navwalker(),
                 ) );
                 ?>
+            <div class="" id="search">
+                <?php get_search_form()?>
             </div>
-        </nav>
+
+                
+        </div>
+    </nav>
 </header>
 
 
