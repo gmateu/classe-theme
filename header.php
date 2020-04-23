@@ -35,7 +35,25 @@
                             <?php get_search_form()?>
                         </div>                            
                     </div>
-                    <div class="acount col-12 col-md-6">
+                    <div class="acount col-12 col-md-4">
+                        <div class="navbar-expand">
+                            <ul class="navbar-nav">
+                                <?php if(is_user_logged_in(  )):?>
+                                <li>
+                                    <a href="<?php echo esc_url(get_permalink( get_option( 'woocommerce_myaccount_page_id')))?>" class="nav-link">Mi cuenta</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo esc_url(wp_logout_url(get_permalink( get_option( 'woocommerce_myaccount_page_id'))  ))?>" class="nav-link">Log out</a>
+                                </li>
+                                <?php else:?>
+                                <li>
+                                    <a href="<?php echo esc_url(get_permalink( get_option( 'woocommerce_myaccount_page_id')))?>" class="nav-link">Login</a>
+                                </li>
+                                <?php endif?>
+                            </ul>    
+                        </div>
+                    </div>        
+                    <div class="carrito col-12 col-md-2">
                         <div class="cart text-center text-md-right">
                             <a href="<?php echo wc_get_cart_url()?>">
                                 <span class="cart-icon"></span>

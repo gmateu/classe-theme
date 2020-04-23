@@ -1,71 +1,116 @@
 /*
-Author: Iván Cancelas
-Theme Name: defabrica
+Theme Name: Fancy Lab
+Theme URI: http://www.inbrackets.dev/themes/fancy-lab-theme
+Author: inbrackets
+Author URI: http://www.inbrackets.dev
+Description: Fancy Lab is a compatible WooCommerce theme made with WordPress. It is the best theme for you to sell anything online, beautifuly designed and fully responsive.
 Version: 1.0
-Tema de pruebas de fabrica dddd
+Text-domain: fancy-lab
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
 */
-
-:root{
-    --primary-color:rgb(176, 238, 204);
-    --text-color:rgb(12, 44, 16);
-}
 
 
 body{
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rajdhani',sans-serif;
+}
+
+/* Header - Main Menu */
+.main-menu{
+    padding: 0;
+}
+
+.main-menu ul{  
+    padding: 0; 
+    margin: 0; 
+    font-size: 18px; 
+    font-weight: 500; 
+    border-radius: 0;    
+}
+
+.main-menu ul li{ 
+    display: inline;  
+    margin: 0 5px 0 0;
+}
+
+.main-menu ul li:last-child{ 
+    margin: 0; 
 }
 
 
-
-.btn-secondary{
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-weight: bold;
-    border: 2px solid var(--primary-color);
+/* Footer - Footer Menu */
+.footer-menu ul, .footer-widgets ul{ 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    font-size: 16px; 
 }
 
-.btn-secondary:hover{
-    background-color: var(--text-color);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+.footer-menu ul li{ 
+    display: inline; 
+    margin: 0 10px 0 0;
 }
 
-#top-bar{
-    background-color: orange;
-    height: 70px;
+.footer-menu ul li:last-child{ 
+    margin: 0; 
 }
 
-/*HEADER STYLES*/
-.brand{
-    background-color: green;
+.main-menu .dropdown:hover>.dropdown-menu,
+.main-menu .dropup:hover>.dropdown-menu{
+    display: block;
 }
 
-.second-col{
-    background-color: yellow;
+.footer-menu ul li a{ 
+    color: #939393; 
+    text-decoration: none;
 }
 
-
-/*ESTILOS DE MAIN MENÚ*/
-.main-menu ul li.current-menu-item a{
-    font-weight: bold;
-}
-.dropdown-menu{
-    opacity: 0.7;
+.footer-menu ul li.current-menu-item a{ 
+    color: #ff9292; 
 }
 
 
+/* WooCommerce */
 
-
-/*FOOTER STYLES*/
-#footer ul{
-    list-style: none;
-    padding: 0px;
+/*Cart*/
+.cart .cart-icon{
+    background-image: url('img/cart.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
-#footer  a{
-    color: var(--text-color);
+.cart .items{
+    background-color: #ca2424;
+    color:white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
 }
+
+
+/* Grid System */
+.woocommerce .col2-set .col-1,
+.woocommerce .col2-set .col-2{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+@media all and (max-width: 767px) {
+
+    .woocommerce .col2-set .col-1,
+    .woocommerce .col2-set .col-2{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
 
 /* Shop */
 
@@ -289,25 +334,6 @@ body{
 
 /* Cart */
 
-.cart .cart-icon{
-    background: url('img/cart.svg');
-    background-repeat: no-repeat;
-    height: 25px;
-    width: 25px;
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-.cart .items{
-    background-color: #ca2424;
-    color:white;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    border-radius: 50%;
-    text-align: center;
-}
-
 .woocommerce-cart table.cart td.actions .coupon .input-text{
     width: 150px;
 }
@@ -359,3 +385,37 @@ body{
     padding: 0.3rem 1rem;
     margin-right: 0.3rem;
 }
+
+
+.headline {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+  
+  }
+
+.metabox {
+    background-color: #FAF0CA;
+    border-radius: 3px;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, .07);
+  
+  }
+
+  .metabox p {
+    margin: 0;
+    font-size: .9rem;
+    color: rgb(168, 146, 56);
+  }
+  
+  .metabox a {
+    color: rgb(168, 146, 56);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .metabox a:hover {
+    text-decoration: underline;
+  }
